@@ -19,6 +19,7 @@ jobs:
         with:
           token: ${{ secrets.BOT_PAT }}
           submodules: recursive
+          persist-credentials: true
       - name: Get Branch Name
         shell: bash
         run: echo "::set-output name=name::$(bash scripts/branchname.sh)"
