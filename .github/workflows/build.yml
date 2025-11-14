@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Configure git to use PAT for all GitHub URLs
-        run: git config --global url."https://x-access-token:${{ secrets.BOT_PAT }}@github.com/".insteadOf "https://github.com/"
+        run: git config --global url."https://x-access-token:${{ secrets.BOT_PAT3 }}@github.com/".insteadOf "https://github.com/"
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.BOT_PAT }}
+          token: ${{ secrets.BOT_PAT3 }}
           submodules: recursive
           persist-credentials: true
       - name: Get Branch Name
